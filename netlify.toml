@@ -1,0 +1,22 @@
+[build]
+  publish = "."
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+# Redirect for pretty URLs (optional)
+[[redirects]]
+  from = "/presentation"
+  to = "/index.html"
+  status = 200
+
+# Custom 404 page (optional)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 404

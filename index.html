@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incident Response Planning for Small Businesses - Westchester County Cybersecurity Task Force</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="presentation-container">
+        <!-- Navigation Controls -->
+        <div class="nav-controls">
+            <button id="prevBtn" onclick="changeSlide(-1)">‹</button>
+            <span id="slideCounter">1 / 16</span>
+            <button id="nextBtn" onclick="changeSlide(1)">›</button>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="progress-bar">
+            <div class="progress" id="progressBar"></div>
+        </div>
+
+        <!-- Slide 1: Title Slide -->
+        <div class="slide active">
+            <div class="slide-content title-slide">
+                <h1>Incident Response Planning for Small Businesses</h1>
+                <h2>Protecting Your Business When Cyber Incidents Strike</h2>
+                <div class="presenter-info">
+                    <p><strong>Presented by:</strong><br>
+                    Westchester County Cybersecurity Task Force</p>
+                    <p><strong>For:</strong><br>
+                    Local Chamber of Commerce</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 2: Welcome & Agenda -->
+        <div class="slide">
+            <div class="slide-content">
+                <h1>Welcome & What We'll Cover</h1>
+                <div class="agenda">
+                    <ul>
+                        <li>What is Incident Response Planning?</li>
+                        <li>Why Small Businesses Are Targets</li>
+                        <li>The Cost of Being Unprepared</li>
+                        <li>Building Your Response Plan</li>
+                        <li>Essential Security Basics</li>
+                        <li>Cyber Liability Insurance</li>
+                        <li>Steps to Take Today</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3: Video Introduction -->
+        <div class="slide">
+            <div class="slide-content">
+                <h1>Let's Start with a Quick Video</h1>
+                <p class="subtitle">Understanding the cyber threat landscape for small businesses</p>
+                <div class="video-container">
+                    <iframe 
+                        src="https://www.youtube.com/embed/BWPk_8sv8Ag?si=C-rw0n0xD4LLeXfA" 
+                        title="Cybersecurity for Small Businesses"
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="video-note">
+                    <p><i class="fas fa-info-circle"></i> This video provides important context for our discussion on incident response planning</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 4: What is Incident Response? -->
+        <div class="slide">
+            <div class="slide-content">
+                <h1>What is Incident Response Planning?</h1>
+                <div class="definition-box">
+                    <p><strong>A structured approach to handling security breaches or cyber attacks</strong></p>
+                </div>
+                <div class="key-points">
+                    <h3>Think of it as your business's "fire drill" for cyber attacks:</h3>
+                    <ul>
+                        <li><i class="fas fa-bullseye"></i> <strong>Preparation:</strong> Having a plan before trouble strikes</li>
+                        <li><i class="fas fa-search"></i> <strong>Detection:</strong> Knowing when something's wrong</li>
+                        <li><i class="fas fa-exclamation-triangle"></i> <strong>Response:</strong> Taking immediate action to limit damage</li>
+                        <li><i class="fas fa-wrench"></i> <strong>Recovery:</strong> Getting back to business safely</li>
+                        <li><i class="fas fa-graduation-cap"></i> <strong>Learning:</strong> Improving for next time</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 4: Why Small Businesses? -->
+        <div class="slide">
+            <div class="slide-content">
+                <h1>Why Are Small Businesses Targeted?</h1>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">43%</div>
+                        <div class="stat-text">of cyber attacks target small businesses</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">60%</div>
+                        <div class="stat-text">of small companies go out of business within 6 months of a cyber attack</div>
+                    </div>
+                </div>
+                <div class="reasons">
+                    <h3>Why attackers choose small businesses:</h3>
+                    <ul>
+                        <li><i class="fas fa-bullseye"></i> <strong>Easier targets:</strong> Often lack dedicated IT security</li>
+                        <li><i class="fas fa-dollar-sign"></i> <strong>Valuable data:</strong> Customer info, financial records, business secrets</li>
+                        <li><i class="fas fa-unlock"></i> <strong>Weaker defenses:</strong> Limited security budgets and tools</li>
+                        <li><i class="fas fa-bolt"></i> <strong>Quick payoffs:</strong> More likely to pay ransoms to get back to business</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 5: The Cost of Being Unprepared -->
+        <div class="slide">
+            <div class="slide-content">
+                <h1>The Real Cost of Being Unprepared</h1>
+                <div class="cost-breakdown">
+                    <div class="cost-category">
+                        <h3><i class="fas fa-dollar-sign"></i> Direct Financial Impact</h3>
+                        <ul>
+                            <li>Average cost: <strong>$200,000 per incident</strong></li>
+                            <li>Ransom payments: $10,000 - $50,000+</li>
+                            <li>System restoration costs</li>
+                        </ul>
+                    </div>
+                    <div class="cost-category">
+                        <h3><i class="fas fa-clock"></i> Business Disruption</h3>
+                        <ul>
+                            <li>Average downtime: <strong>23 days</strong></li>
+                            <li>Lost productivity and revenue</li>
+                            <li>Customer service interruptions</li>
+                        </ul>
+                    </div>
+                    <div class="cost-category">
+                        <h3><i class="fas fa-handshake"></i> Long-term Damage</h3>
+                        <ul>
+                            <li>Customer trust and reputation</li>
+                            <li>Legal liability and compliance issues</li>
+                            <li>Competitive disadvantage</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 6: Your Incident Response Plan -->
+        <div class="slide">
+            <div class="slide-content">
+                <h1>Building Your Incident Response Plan</h1>
+                <div class="plan-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Identify Your Critical Assets</h3>
+                            <p>What data, systems, and processes are essential to your business?</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Create Your Response Team</h3>
+                            <p>Who will lead? Who are your key contacts? (Even if it's just you!)</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Establish Communication Procedures</h3>
+                            <p>How will you communicate during an incident?</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>Document Recovery Procedures</h3>
+                            <p>Step-by-step instructions to restore operations</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 7: Essential Security Basics -->
+        <div class="slide">
+            <div class="slide-content">
+                <h1>Bottom-Line Security Essentials</h1>
+                <p class="subtitle">These four basics will prevent 90% of attacks</p>
+                <div class="security-grid">
+                    <div class="security-item">
+                        <div class="security-icon"><i class="fas fa-lock"></i></div>
+                        <h3>Multi-Factor Authentication (MFA)</h3>
+                        <p>Require a second form of identification beyond just passwords</p>
+                        <div class="tip"><i class="fas fa-lightbulb"></i> Start with email, banking, and business apps</div>
+                    </div>
+                    <div class="security-item">
+                        <div class="security-icon"><i class="fas fa-key"></i></div>
+                        <h3>Password Managers</h3>
+                        <p>Use unique, strong passwords for every account</p>
+                        <div class="tip"><i class="fas fa-lightbulb"></i> Popular options: Bitwarden, 1Password, Dashlane</div>
+                    </div>
+                    <div class="security-item">
+                        <div class="security-icon"><i class="fas fa-hdd"></i></div>
+                        <h3>Regular Backups</h3>
+                        <p>Follow the 3-2-1 rule: 3 copies, 2 different media, 1 offsite</p>
+                        <div class="tip"><i class="fas fa-lightbulb"></i> Test your backups regularly!</div>
+                    </div>
+                    <div class="security-item">
+                        <div class="security-icon"><i class="fas fa-brain"></i></div>
+                        <h3>Cyber Awareness Training</h3>
+                        <p>Train staff to recognize phishing and social engineering</p>
+                        <div class="tip"><i class="fas fa-lightbulb"></i> Regular, short training sessions work best</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 8: Multi-Factor Authentication Deep Dive -->
+        <div class="slide">
+            <div class="slide-content">
+                <h1>Multi-Factor Authentication: Your Best Defense</h1>
+                <div class="mfa-explanation">
+                    <div class="mfa-visual">
+                        <h3>Something you know + Something you have = Much safer</h3>
+                        <div class="mfa-example">
+                            <div class="auth-step">
+                                <span class="step-label">Step 1:</span>
+                                <span>Password</span>
+                                <span class="step-icon"><i class="fas fa-edit"></i></span>
+                            </div>
+                            <div class="plus">+</div>
+                            <div class="auth-step">
+                                <span class="step-label">Step 2:</span>
+                                <span>Phone Code</span>
+                                <span class="step-icon"><i class="fas fa-mobile-alt"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mfa-benefits">
+                        <h3>Why MFA is crucial:</h3>
+                        <ul>
+                            <li>Blocks 99.9% of automated attacks</li>
+                            <li>Protects even if passwords are stolen</li>
+                            <li>Easy to set up on most business apps</li>
+                        </ul>
+                    </div>
+                    <div class="quick-wins">
+                        <h3><i class="fas fa-bullseye"></i> Quick Wins - Enable MFA on:</h3>
+                        <ul>
+                            <li>Business email (Gmail, Outlook, etc.)</li>
+                            <li>Banking and financial accounts</li>
+                            <li>Cloud storage (Dropbox, OneDrive, etc.)</li>
+                            <li>Social media business accounts</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 9: Cyber Liability Insurance -->
+        <div class="slide">
+            <div class="slide-content">
+                <h1>Cyber Liability Insurance: Your Safety Net</h1>
+                <div class="insurance-content">
+                    <div class="insurance-definition">
+                        <h3>What is Cyber Liability Insurance?</h3>
+                        <p>Insurance that helps cover costs related to cyber incidents and data breaches</p>
+                    </div>
+                    <div class="coverage-areas">
+                        <h3>What it typically covers:</h3>
+                        <div class="coverage-grid">
+                            <div class="coverage-item">
+                                <h4><i class="fas fa-wrench"></i> Incident Response</h4>
+                                <p>IT forensics, system restoration, legal counsel</p>
+                            </div>
+                            <div class="coverage-item">
+                                <h4><i class="fas fa-dollar-sign"></i> Business Interruption</h4>
+                                <p>Lost income during downtime</p>
+                            </div>
+                            <div class="coverage-item">
+                                <h4><i class="fas fa-bullhorn"></i> Notification Costs</h4>
+                                <p>Customer notification, credit monitoring</p>
+                            </div>
+                            <div class="coverage-item">
+                                <h4><i class="fas fa-balance-scale"></i> Legal Protection</h4>
+                                <p>Regulatory fines, lawsuits, settlements</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="insurance-tips">
+                        <h3><i class="fas fa-lightbulb"></i> Key Considerations:</h3>
+                        <ul>
+                            <li>Coverage limits should match your risk exposure</li>
+                            <li>Look for policies that include incident response services</li>
+                            <li>Understand what security measures are required</li>
+                            <li>Consider bundling with general liability insurance</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 10: Creating Your Incident Response Team -->
+        <div class="slide">
+            <div class="slide-content">
+                <h1>Your Incident Response Team</h1>
+                <p class="subtitle">Even small businesses need defined roles</p>
+                <div class="roles-grid">
+                    <div class="role-card">
+                        <h3><i class="fas fa-user-tie"></i> Incident Commander</h3>
+                        <p><strong>Usually:</strong> Business owner or manager</p>
+                        <ul>
+                            <li>Makes key decisions</li>
+                            <li>Coordinates response efforts</li>
+                            <li>Communicates with stakeholders</li>
+                        </ul>
+                    </div>
+                    <div class="role-card">
+                        <h3><i class="fas fa-laptop-code"></i> Technical Lead</h3>
+                        <p><strong>Could be:</strong> IT person, tech-savvy employee, or external consultant</p>
+                        <ul>
+                            <li>Handles technical response</li>
+                            <li>Works with IT vendors</li>
+                            <li>Manages system recovery</li>
+                        </ul>
+                    </div>
+                    <div class="role-card">
+                        <h3><i class="fas fa-phone"></i> Communications Lead</h3>
+                        <p><strong>Usually:</strong> Manager or administrative staff</p>
+                        <ul>
+                            <li>Handles customer communications</li>
+                            <li>Manages media if needed</li>
+                            <li>Coordinates with legal counsel</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="team-tip">
+                    <p><strong><i class="fas fa-lightbulb"></i> For very small businesses:</strong> One person may wear multiple hats, but still define the roles and have backup contacts</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 11: Key Contacts & Resources -->
+        <div class="slide">
+            <div class="slide-content">
+                <h1>Essential Contacts & Resources</h1>
+                <p class="subtitle">Have these ready BEFORE you need them</p>
+                <div class="contacts-grid">
+                    <div class="contact-category">
+                        <h3><i class="fas fa-exclamation-triangle"></i> Emergency Contacts</h3>
+                        <ul>
+                            <li>IT support vendor/consultant</li>
+                            <li>Cyber insurance provider</li>
+                            <li>Legal counsel</li>
+                            <li>Banking contacts</li>
+                        </ul>
+                    </div>
+                    <div class="contact-category">
+                        <h3><i class="fas fa-university"></i> Government Resources</h3>
+                        <ul>
+                            <li>FBI Internet Crime Complaint Center (IC3)</li>
+                            <li>CISA (Cybersecurity & Infrastructure Security Agency)</li>
+                            <li>Local law enforcement</li>
+                            <li>State attorney general's office</li>
+                        </ul>
+                    </div>
+                    <div class="contact-category">
+                        <h3><i class="fas fa-wrench"></i> Technical Support</h3>
+                        <ul>
+                            <li>Internet service provider</li>
+                            <li>Cloud service providers</li>
+                            <li>Software vendors</li>
+                            <li>Security tool vendors</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="resource-tip">
+                    <p><strong><i class="fas fa-lightbulb"></i> Pro Tip:</strong> Keep this list in multiple places - both digital and printed copies</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 12: When an Incident Happens -->
+        <div class="slide">
+            <div class="slide-content">
+                <h1>When an Incident Happens: First Steps</h1>
+                <div class="incident-steps">
+                    <div class="immediate-actions">
+                        <h3><i class="fas fa-exclamation-triangle"></i> Immediate Actions (First Hour)</h3>
+                        <ol>
+                            <li><strong>Stay calm</strong> - Panic leads to poor decisions</li>
+                            <li><strong>Contain the threat</strong> - Disconnect affected systems if safe to do so</li>
+                            <li><strong>Document everything</strong> - Take photos, screenshots, notes</li>
+                            <li><strong>Activate your response team</strong> - Call your key contacts</li>
+                            <li><strong>Notify your insurance</strong> - Many policies require quick notification</li>
+                        </ol>
+                    </div>
+                    <div class="dont-list">
+                        <h3><i class="fas fa-times"></i> DON'T Do These Things:</h3>
+                        <ul>
+                            <li>Don't pay ransoms immediately</li>
+                            <li>Don't turn off systems randomly</li>
+                            <li>Don't try to "fix it yourself" without expertise</li>
+                            <li>Don't communicate with attackers directly</li>
+                            <li>Don't ignore legal notification requirements</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="golden-rule">
+                    <p><strong><i class="fas fa-bullseye"></i> Golden Rule:</strong> When in doubt, ask for help. It's better to over-respond than under-respond.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 13: Testing and Maintenance -->
+        <div class="slide">
+            <div class="slide-content">
+                <h1>Testing Your Plan</h1>
+                <p class="subtitle">A plan that's never tested is just wishful thinking</p>
+                <div class="testing-approaches">
+                    <div class="test-type">
+                        <h3><i class="fas fa-clipboard-list"></i> Tabletop Exercises</h3>
+                        <p>Gather your team and walk through scenarios</p>
+                        <div class="frequency">Frequency: Quarterly</div>
+                        <ul>
+                            <li>What if our email system is down?</li>
+                            <li>What if customer data is compromised?</li>
+                            <li>What if our website is defaced?</li>
+                        </ul>
+                    </div>
+                    <div class="test-type">
+                        <h3><i class="fas fa-wrench"></i> Technical Tests</h3>
+                        <p>Test your backups and recovery procedures</p>
+                        <div class="frequency">Frequency: Monthly</div>
+                        <ul>
+                            <li>Can you actually restore from backups?</li>
+                            <li>Do your emergency contacts work?</li>
+                            <li>Are your passwords and MFA working?</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="maintenance-checklist">
+                    <h3><i class="fas fa-sync-alt"></i> Regular Maintenance</h3>
+                    <ul>
+                        <li>Update contact information</li>
+                        <li>Review and update procedures</li>
+                        <li>Train new employees</li>
+                        <li>Update insurance coverage as business grows</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 14: Action Items You Can Do Today -->
+        <div class="slide">
+            <div class="slide-content">
+                <h1>What You Can Do This Week</h1>
+                <div class="action-timeline">
+                    <div class="time-block">
+                        <h3><i class="fas fa-running"></i> Today (30 minutes)</h3>
+                        <ul>
+                            <li>Enable MFA on your business email</li>
+                            <li>Sign up for a password manager</li>
+                            <li>Write down your critical business systems</li>
+                        </ul>
+                    </div>
+                    <div class="time-block">
+                        <h3><i class="fas fa-calendar-week"></i> This Week</h3>
+                        <ul>
+                            <li>Contact your insurance agent about cyber liability coverage</li>
+                            <li>Create a contact list for emergencies</li>
+                            <li>Test your current backup system</li>
+                            <li>Research local IT support options</li>
+                        </ul>
+                    </div>
+                    <div class="time-block">
+                        <h3><i class="fas fa-calendar-alt"></i> This Month</h3>
+                        <ul>
+                            <li>Draft your basic incident response plan</li>
+                            <li>Provide basic cyber awareness training to staff</li>
+                            <li>Review your current security practices</li>
+                            <li>Schedule your first tabletop exercise</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 15: Resources and Support -->
+        <div class="slide">
+            <div class="slide-content">
+                <h1>Resources & Support</h1>
+                <div class="resources-grid">
+                    <div class="resource-section">
+                        <h3><i class="fas fa-university"></i> Government Resources</h3>
+                        <ul>
+                            <li><strong>CISA.gov</strong> - Free cybersecurity resources</li>
+                            <li><strong>SBA.gov</strong> - Small business cybersecurity guidance</li>
+                            <li><strong>NIST Cybersecurity Framework</strong> - Industry standards</li>
+                        </ul>
+                    </div>
+                    <div class="resource-section">
+                        <h3><i class="fas fa-book"></i> Educational Resources</h3>
+                        <ul>
+                            <li><strong>SANS Security Awareness</strong> - Training materials</li>
+                            <li><strong>KnowBe4</strong> - Phishing simulation and training</li>
+                            <li><strong>Cybersecurity & Infrastructure Security Agency</strong> - Free training</li>
+                        </ul>
+                    </div>
+                    <div class="resource-section">
+                        <h3><i class="fas fa-handshake"></i> Local Support</h3>
+                        <ul>
+                            <li><strong>Westchester County Cybersecurity Task Force</strong></li>
+                            <li><strong>Local SCORE mentors</strong></li>
+                            <li><strong>Chamber of Commerce peer networks</strong></li>
+                            <li><strong>Local IT consultants and MSPs</strong></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="contact-info">
+                    <h3><i class="fas fa-phone"></i> Get Help</h3>
+                    <p>Don't go it alone - there are resources available to help you protect your business</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 16: Thank You -->
+        <div class="slide">
+            <div class="slide-content title-slide">
+                <h1>Thank You</h1>
+                <h2>Questions & Discussion</h2>
+                <div class="presenter-info">
+                    <p><strong>Westchester County Cybersecurity Task Force</strong></p>
+                    <p>Protecting our local business community</p>
+                </div>
+                <div class="final-message">
+                    <p><em>"Your business's cybersecurity is not just about technology—<br>
+                    it's about protecting your livelihood and your customers' trust."</em></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
