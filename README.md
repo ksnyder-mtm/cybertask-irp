@@ -1,6 +1,6 @@
 # Incident Response Planning for Small Businesses
 
-A web-based slide presentation created for the Westchester County Cybersecurity Task Force presentation to the local Chamber of Commerce.
+A web-based slide presentation created for the Westchester County Cybersecurity Task Force.
 
 ## Overview
 
